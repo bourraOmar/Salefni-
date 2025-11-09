@@ -1,0 +1,86 @@
+{
+  "creditTypes": [
+    { "id": "auto", "label": "Crédit Auto", "defaultAnnualRate": 4.2, "defaultFees": 300, "defaultInsuranceRate": 0.2, "maxMonths": 84, "minAmount": 10000, "maxAmount": 400000 },
+    { "id": "conso", "label": "Crédit Consommation", "defaultAnnualRate": 6.8, "defaultFees": 150, "defaultInsuranceRate": 0.0, "maxMonths": 60, "minAmount": 1000, "maxAmount": 150000 },
+    { "id": "immo", "label": "Crédit Immobilier", "defaultAnnualRate": 4.0, "defaultFees": 1500, "defaultInsuranceRate": 0.25, "maxMonths": 360, "minAmount": 100000, "maxAmount": 3000000 }
+  ],
+
+  "employmentTypes": [
+    { "id": "cdi", "label": "CDI" },
+    { "id": "cdd", "label": "CDD" },
+    { "id": "autoentrepreneur", "label": "Auto-entrepreneur" },
+    { "id": "fonctionnaire", "label": "Fonctionnaire" },
+    { "id": "etudiant", "label": "Étudiant" },
+    { "id": "retraite", "label": "Retraité" }
+  ],
+
+  "jobs": [
+    { "id": "dev", "label": "Développeur" },
+    { "id": "enseignant", "label": "Enseignant" },
+    { "id": "comptable", "label": "Comptable" },
+    { "id": "agentco", "label": "Agent commercial" },
+    { "id": "chauffeur", "label": "Chauffeur" }
+  ],
+
+  "applications": [
+    {
+      "id": 1,
+      "simulationId": 1,
+      "fullName": "John Doe",
+      "email": "john@example.com",
+      "phone": "+212600000000",
+      "creditTypeId": "auto",
+      "employmentTypeId": "cdi",
+      "jobId": "dev",
+      "monthlyIncome": 12000,
+      "comment": "Achat véhicule utilitaire",
+      "status": "pending",
+      "priority": false,
+      "notes": [],
+      "createdAt": "2025-11-03T10:20:00Z",
+      "updatedAt": "2025-11-03T10:20:00Z"
+    }
+  ],
+
+  "simulations": [
+    {
+      "id": 1,
+      "creditTypeId": "auto",
+      "amount": 120000,
+      "months": 48,
+      "annualRate": 4.2,
+      "fees": 300,
+      "insuranceRate": 0.2,
+      "monthlyPayment": 2715.43,
+      "totalCost": 130339.00,
+      "apr": 4.45,
+      "amortization": [
+        { "month": 1, "interest": 420.00, "principal": 2295.43, "remaining": 117704.57 },
+        { "month": 2, "interest": 412.96, "principal": 2302.47, "remaining": 115402.10 },
+        { "month": 3, "interest": 405.91, "principal": 2309.52, "remaining": 113092.58 }
+      ],
+      "createdAt": "2025-11-03T10:15:00Z"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": 1,
+      "type": "NEW_APPLICATION",
+      "applicationId": 1,
+      "title": "Nouvelle demande de crédit",
+      "seen": false,
+      "createdAt": "2025-11-03T10:20:05Z"
+    }
+  ],
+
+  "admins": [
+    { "id": 1, "email": "admin@selefni.com", "password": "admin" }
+  ],
+
+  "settings": {
+    "currency": "MAD",
+    "maxSimRowsPreview": 6,
+    "allowGuestApplications": true
+  }
+}
